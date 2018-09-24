@@ -11,38 +11,56 @@
 // Your code :
 
 const multiply = (x,y) => {
-	
+	 
 	 if (x>0 && y>0){
-		for (let i=1; i<x; i++)
-		{ y = y + y;}
+		 let resul=0;
+		for (let i=0; i<x; i++)
+		{ resul = resul + y;}
+		 return resul;
 	 }
-	 else if (x<0 && y<0){
-		for (let i=-1; x<i; i--)
-		{ y = y + y;}
-		 let resul = 0;
-		for (let i=0; y<i; i--)
-		{ resul++;}
-		 y=resul;}
-	 else if (x==0 || y==0){
-		y=0; 
-	 }
-	 else if (x>0 && y<0){
-		for (let i=1; i<x; i++)
-		{ y = y + y;}
-		 let resul = 0;
-		for (let i=0; y<i; i--)
-		{ resul++;}
-		 y=resul;
-	 }
+	 
+	
+	
+	else if (x<0 && y<0){
+		let a=0;
+		let resul=0;
+		for (let i=0; x<i; i--)
+		{resul=resul+y}
 		 
-	else if (x<0 && y>0){
-		
-		
-		for (let i=-1; x<i; i--)
-		{ y = y + y;}
-			
+		for (let i=0; resul<i; i--)
+		{ a++;}
+		 resul=a;
+		return resul;
 	}
-	return y;
+	
+	
+	else if (x>0 && y<0){
+		let resul=0;
+		for (let i=0; x>i; i++)
+		{resul=resul+y}
+		 return resul;
+	
+	 }
+	
+	else if (x<0 && y>0){
+		let a=0;
+		let resul=0;
+		for (let i=0; x<i; i--)
+		{resul=resul+y}
+		
+		for (let i=0; resul>i; i++)
+		{ a--;}
+		resul=a;
+		return resul;
+	}
+	
+	else if (x==0 || y==0)
+	{let resul=0;
+	return resul;
+	}
+	
+	
+	
 };
 
 //* Begin of tests
