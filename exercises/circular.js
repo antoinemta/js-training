@@ -9,11 +9,8 @@
 
 // Your code :
 
-
-const circular = {
-	circular:circular
-};
-
+const circular = {};
+circular.circular = circular;
 
 
 //* Begin of tests
