@@ -17,6 +17,25 @@ const sourceObject = {
 
 // Your code :
 
+const get = (x) => {
+	if (x=='num'){
+		return sourceObject.num;	
+	}
+	else if (x=='bool'){
+		return sourceObject.bool;	
+	}
+	else if (x=='str'){
+		return sourceObject.str;	
+	}
+	else if (x=='log'){
+		return sourceObject.log;	
+	}
+	else if (x=='noexist')
+	{
+		return undefined;
+	}
+};
+
 //* Begin of tests
 const assert = require('assert')
 
