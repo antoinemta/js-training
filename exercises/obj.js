@@ -9,6 +9,21 @@
 
 // Your code :
 
+class ads {
+
+	constructor(str,num,bool,undef)
+	{
+		this.str = str;
+		this.num = num;
+		this.bool = bool;
+		this.undef = undef;
+	}
+	
+	
+}
+
+let obj = new ads("1337",42,false,undefined);
+
 //* Begin of tests
 const assert = require('assert')
 
