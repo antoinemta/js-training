@@ -10,6 +10,41 @@
 
 // Your code :
 
+const multiply = (x,y) => {
+	
+	 if (x>0 && y>0){
+		for (let i=1; i<x; i++)
+		{ y = y + y;}
+	 }
+	 else if (x<0 && y<0){
+		for (let i=-1; x<i; i--)
+		{ y = y + y;}
+		 let resul = 0;
+		for (let i=0; y<i; i--)
+		{ resul++;}
+		 y=resul;}
+	 else if (x==0 || y==0){
+		y=0; 
+	 }
+	 else if (x>0 && y<0){
+		for (let i=1; i<x; i++)
+		{ y = y + y;}
+		 let resul = 0;
+		for (let i=0; y<i; i--)
+		{ resul++;}
+		 y=resul;
+	 }
+		 
+	else if (x<0 && y>0){
+		
+		
+		for (let i=-1; x<i; i--)
+		{ y = y + y;}
+			
+	}
+	return y;
+};
+
 //* Begin of tests
 const assert = require('assert')
 
