@@ -11,15 +11,117 @@
 
 // Your code :
 
+let b=0;
+let z=1;
+
 function multiply(x,n)
 {
-   
-
-
-  return x*n;
-
-    
+  if (x>0 && n>0)
+  {
+	if (z==1)
+	{
+		z=0;
+		b=n;
+		
+	}
+		
+		if (x>1)
+		{
+			n+=b;
+			x--;
+			return multiply(x,n);
+		}
+	
+		else
+		{
+			b=0;
+			z=1;
+			return n;
+			
+		}
+  }
+	
+else if (x==0 || n==0)
+  		{
+		return 0;	
+		}
+	
+else if (x>0 && n<0)
+  {
+	if (z==1)
+	{
+		z=0;
+		b=n;
+		
+	}
+		
+		if (x>1)
+		{
+			n+=b;
+			x--;
+			return multiply(x,n);
+		}
+	
+		else
+		{
+			b=0;
+			z=1;
+			return n;
+			
+		}
+  }
+	
+	
+else if (x<0 && n>0)
+  {
+	if (z==1)
+	{
+		z=0;
+		b=n;
+		
+	}
+		
+		if (x<-1)
+		{
+			n+=b;
+			x++;
+			return multiply(x,n);
+		}
+	
+		else
+		{
+			b=0;
+			z=1;
+			n="-"+String(n);
+			return Number(n);
+			
+		}
+  }
+	
+else if (x<0 && n<0)
+  {
+	if (z==1)
+	{
+		z=0;
+		b=n;
+	}
+		if (x<-1)
+		{
+			n+=b;
+			x++;
+			return multiply(x,n);
+		}
+		else
+		{
+			b=0;
+			z=1;
+			n=String(n).replace('-','');
+			return Number(n);
+			
+		}
+  }
 }
+	
 
 //* Begin of tests
 const assert = require('assert')
@@ -29,7 +131,7 @@ assert.strictEqual(multiply.length, 2)
 assert.strictEqual(multiply.toString().includes('Math.imul'), false)
 assert.strictEqual(multiply.toString().includes('while'), false)
 assert.strictEqual(multiply.toString().includes('for'), false)
-assert.strictEqual(multiply.toString().includes('*'), true)
+assert.strictEqual(multiply.toString().includes('*'), false)
 assert.strictEqual(multiply.toString().includes('/'), false)
 assert.strictEqual(multiply(34, 78), 2652)
 assert.strictEqual(multiply(123, 0), 0)
